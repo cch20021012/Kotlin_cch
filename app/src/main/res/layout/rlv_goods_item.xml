@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vmGoods"
+            type="com.example.cch_kotiln.model.Goods" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="170dp"
+        android:layout_height="230dp">
+
+        <ImageView
+            android:background="#E8E8E8"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/img_pic"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:imageUrl="@{vmGoods.list_pic_url}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/img_pic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{vmGoods.name}"
+            />
+
+        <TextView
+            android:textColor="@color/colorRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{vmGoods.retail_price}"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

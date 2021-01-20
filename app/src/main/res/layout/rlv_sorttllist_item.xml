@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vmSortTllist"
+            type="com.example.cch_kotiln.model.SortTlListData.DataX" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_260">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:id="@+id/img_pic"
+            bind:imageUrl="@{vmSortTllist.list_pic_url}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:text="@{vmSortTllist.name}"
+            />
+
+        <TextView
+            android:textColor="#F44336"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_price"
+            android:text="@{vmSortTllist.retail_price}"
+            />
+    </LinearLayout>
+</layout>
